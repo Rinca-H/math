@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	    <title>Rinca's math exploration note</title>
+	    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	    <meta name="viewport" content="width=device-width">
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+	<h1>Rinca's math exploration note</h><br>
+		<math>
+ 	   <mi>x</mi>
+	    <mo>+</mo>
+ 	   <mn>5</mn>
+ 	   <mo>=</mo>
+ 	   <mn>7</mn>
+		</math>
+	<br>
+		文章中の数式\[ P(x)=1 \]はこれじゃダメか
+		2の平方根は次で表される：<br>
+        \[
+        \sqrt{2} \approx 1.41421356237
+        \]<br>
+        \[
+        \sum_{k=1}^n k = 1 + 2 + \dots + n = \frac{n(n-1)}{2}
+        \]<br>
+        \[
+        x+5=7
+        \]<br>
+        光は真空中を1秒間に約 $3.0 × 10^8$ メートル進む。光速を $c$ で表す。<br>
+        \[
+        x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+        \]
+        \[
+        (a+b)^n=\sum_{k=0}^n \binom{n}{n-k}a^{n-k}b^k
+        \]
+        \begin{align*}
+        f_0 &= 1\\
+        f_1 &= 1\\
+        f_n &= f_{n-1}+f_{n-2}, \qquad n\geq 2
+        \end{align*}
+        \begin{align}
+        \langle f_1(x)\,|\, \phi(x-\ell)\rangle_{L^2} 
+        &= \sum_k c^*_k\int_{-\infty}^\infty 
+        \phi\left(2(t-\frac{k}{2})\right)^*\phi(t-\ell)\,dt\\
+        &= \sum_\ell \left\{ c_{2\ell}\int_{\ell}^{\ell+\frac12}
+        \phi\left(2(t-\ell)\right)^*\phi(t-\ell)\,dt \right. \nonumber \\
+        & \left. \qquad + c_{2\ell+1}\int_{\ell+\frac12}^{\ell+1}
+        \phi\left(2(t-\ell-\frac12)\right)^*\phi(t-\ell)\,dt\right\} \\
+        & = 0 \quad\text{であるためには $c_{2\ell}=-c_{2\ell+1}$ に限る} \nonumber
+        \end{align}
+	<h2>Equation1</h><br>
+		<p><img src="test.png" alt="TestPicture" width="200" height="200">
+	</body>
+</html>

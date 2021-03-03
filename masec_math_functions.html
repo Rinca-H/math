@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>Rinca's math exploration note</title>
+		<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body bgcolor="#64EC86">
+		<div align="left">
+			<h1><u>関数・多項式</u></h1><br>
+			<h2>ガンマ関数</h2><br>
+			\[
+			\Gamma(z)=\int_0^\infty t^{z-1} e^{-t} dt
+            \\=\lim_{n\to\infty}\frac{n^zn!}{\prod_{k=0}^n(z+k)}
+			\]
+			性質
+			\[
+			\Gamma(z+1)=z\Gamma(z)\\
+			\Gamma(n+1)=n!\\
+			\Gamma(\frac{1}{2}\pm n)=\biggl\{\frac{(2n-1)!!}{(\pm 2)^n}\biggr\}^{\pm 1}\sqrt{\pi}\\
+			\Gamma(z)\Gamma(1-z)=-z\Gamma(z)\Gamma(-z)=\frac{\pi}{\sin\pi z}\\
+			\Gamma(\frac{1}{2}-z)\Gamma(\frac{1}{2}+z)=\frac{\pi}{\cos\pi z}\\
+			\Gamma(2z)=\frac{2^{2z-1}}{\sqrt{\pi}}\Gamma(z)\Gamma(z+\frac{1}{2})\\
+			\Gamma(nz)=\frac{n^{nz-\frac{1}{2}}}{(2\pi)^{\frac{n-1}{2}}}\prod_{k=0}^{n-1}\Gamma(z+\frac{k}{n})\\
+			\int_0^z\ln\Gamma(x)dx=\frac{z(1-z)}{2}+\frac{z}{2}\ln(2\pi)+z\ln\Gamma(z)-\ln G(1+z)
+			\]
+			特殊値
+			\[
+			\Gamma(\frac{1}{2})=\sqrt{\pi}\\
+			-\Gamma'(1)=\gamma
+			\]
+			<h2>バーンズのG関数</h2><br>
+			\[
+			G(z+1)\\
+            =(2\pi)^{\frac{z}{2}}\exp\biggl[-\frac{z+z^2(1+\gamma)}{2}\biggr]\prod_{k=1}^\infty\biggl\{(1+\frac{z}{k})^k\exp\biggl[\frac{z^2}{2k}-z\biggr]\biggr\}
+			\]
+			性質
+			\[
+			G(z+1)=\Gamma(z)G(z)\\
+			G(n)=\frac{(\Gamma(n))^{n-1}}{K(n)}\\
+			G(nz)=K(n)n^{\frac{n^2z^2}{2}-nz}(2\pi)^{-\frac{n^2-n}{2}z}\prod_{i=0}^{n-1}\prod_{j=0}^{n-1}G(z+\frac{i+j}{n})\\
+			\biggl(But\quad K(n)=e^{-(n^2-1)\zeta'(-1)}n^{\frac{5}{12}}(2\pi)^{\frac{n-1}{2}}=(Ae^{\frac{1}{n}})^{n^2-1}n^{\frac{5}{12}}(2\pi)^{\frac{n-1}{2}}\biggr)\\
+			2\pi\ln\biggl(\frac{G(1-z)}{G(1+z)}\biggr)=2\pi z\ln\biggl(\frac{\sin\pi z}{\pi}\biggr)+\textrm{Cl}_2(2\pi z)
+			\]
+			<h2>K関数</h2><br>
+			\[
+			K(z)=(2\pi)^{\frac{-z+1}{2}}\exp\biggl[\binom{z}{2}+\int_0^{z-1}\ln(t!)dt\biggr]\\
+			=\exp[\zeta'(-1,z)-\zeta'(-1)]\\
+			=\exp\biggl[\psi^{(-2)}(z)+\frac{z^2-z}{2}-\frac{z}{2}\ln(2\pi)\biggr]\\
+			K(n)=\frac{(\Gamma(n))^{n-1}}{G(n)}\\
+			K(n+1)=1^1 2^2 3^3\cdots n^n
+			\]
+			特殊値
+			\[
+			K(\frac{1}{2})=\frac{A^{\frac{3}{2}}}{2^{\frac{1}{24}}e^{\frac{1}{3}}}
+			\]
+			<h2>グーデルマン関数</h2><br>
+			\[
+			\textrm{gd}\,x=\int_0^x\frac{dt}{\cosh t}=\sin^{-1}(\tanh\biggl(\frac{x}{2}\biggr))=2\tan^{-1}(e^x)-\frac{\pi}{2}\\
+			\textrm{gd}^{-1}\,x=\int_0^x\frac{dt}{\cos t}=\ln\biggl|\frac{1+\sin x}{\cos x}\biggr|=\frac{1}{2}\ln\biggl|\frac{1+\sin x}{1-\sin x}\biggr|\\
+            =\tanh^{-1}(\sin x)=\sinh^{-1}(\tan x)
+			\]
+			性質
+			\[
+			\textrm{gd}'\,x=\textrm{sech}\, x\qquad(\textrm{gd}^{-1}\,x)'=\sec x
+			\]
+			<h2>正規化sinc関数・非正規化sinc関数</h2><br>
+			\[
+			\textrm{sinc}(x)=\frac{\sin\pi x}{\pi x}\qquad\biggl(\textrm{sinc}(x)=\frac{\sin x}{x}\biggr)
+			\]
+			<h2>テータ関数</h2><br>
+			\[
+			\vartheta(z,\tau)=\sum_{n=-\infty}^\infty\exp(\pi in^2\tau+2\pi inz)
+			\]
+			<h2>リーマン・ゼータ関数</h2><br>
+			\[
+			\zeta(s)=\sum_{n=1}^\infty n^{-s}
+			\]
+			<h2>第一種ベッセル関数</h2><br>
+			\[
+			J_n(x)=\sum_{s=0}^\infty\frac{(-1)^s}{s!\Gamma(n+s+1)}\biggl(\frac{x}{2}\biggr)^{n+2s}
+			\]
+			性質
+			\[
+			\textrm{if}\quad n\in\mathbb{Z}\qquad J_{-n}(x)=(-1)^nJ_n(x)\\
+			\int_0^\infty J_0(bz)\cos azdz\\
+            =\frac{1}{\sqrt{b^2-a^2}}\quad (\textrm{if}\quad b^2>a^2)=0\quad (\textrm{if}\quad a^2>b^2)\\
+			\int_0^\infty J_0(bz)\sin azdz\\
+            =0\quad (\textrm{if}\quad b^2>a^2)=\frac{1}{\sqrt{b^2-a^2}}\quad (\textrm{if}\quad a^2>b^2)\\
+			\int_0^\infty z^ne^{-ax}J_n(bn)dz=\frac{(2n)!b^n}{2^nn!(a^2+b^2)^{\frac{2n+1}{2}}}\\
+			\frac{1}{\pi}\int_0^\pi\cos(n\theta-x\sin\theta)d\theta=J_n(x)
+			\]
+			<h2>第二種ベッセル関数(ノイマン関数)</h2><br>
+			\[
+			Y_\nu(x)=\frac{J_\nu(x)\cos\nu\pi-J_{-\nu}(x)}{\sin\nu\pi}
+			\]
+			<h2>ディガンマ関数</h2><br>
+			\[
+			\psi(x)=\frac{\Gamma'(x)}{\Gamma(x)}=\frac{1}{x-1}+\frac{1}{x-2}+\cdots+\frac{\Gamma'(x-n)}{\Gamma(x-n)}\\
+			\psi(1-x)-\psi(x)=\pi\cot\pi x\\
+			\psi(2x)=\frac{1}{2}(\psi(x)+\psi(x+\frac{1}{2}))+\ln 2
+			\]
+			<h2>フレネル積分</h2><br>
+			\[
+			S(x)=\int_0^x\sin\biggl(\frac{\pi}{2}t^2\biggr)dt\\
+			C(x)=\int_0^x\cos\biggl(\frac{\pi}{2}t^2\biggr)dt
+			\]
+			<h2>正弦積分・余弦積分</h2><br>
+			\[
+			\textrm{Si}(z)=\int_0^z\frac{\sin t}{t}dt\\
+			\textrm{Ci}(z)=-\int_z^{z+\infty}\frac{\cos t}{t}dt
+			\]
+			<h2>クラウセン関数</h2><br>
+			\[
+			\textrm{Cl}_{2m+2}(\theta)=\sum_{k=1}^\infty\frac{\sin k\theta}{k^{2m+2}}\\
+			\textrm{Cl}_{2m+1}(\theta)=\sum_{k=1}^\infty\frac{\cos k\theta}{k^{2m+1}}\\
+			\textrm{Si}_{2m+2}(\theta)=\sum_{k=1}^\infty\frac{\cos k\theta}{k^{2m+2}}\\
+			\textrm{Si}_{2m+1}(\theta)=\sum_{k=1}^\infty\frac{\sin k\theta}{k^{2m+1}}
+			\]
+			<h2>第一,二,三種楕円積分</h2><br>
+			\[
+			F(k,\varphi)=\int_0^\varphi\frac{d\theta}{\sqrt{1-k^2\sin^2\theta}}\\
+			E(k,\varphi)=\int_0^\varphi\sqrt{1-k^2\sin^2\theta}d\theta\\
+			\Pi(a;\varphi,k)=\int_0^\varphi\frac{d\theta}{(1-a\sin\theta)\sqrt{1-k^2\sin^2\theta}}
+			\]
+			sin(φ)=xとすると、
+			\[
+			F(k,x)=\int_0^x\frac{dt}{\sqrt{(1-t^2)(1-k^2t^2)}}\\
+			E(k,x)=\int_0^x\sqrt{\frac{1-k^2t^2}{1-t^2}}dt\\
+			\Pi(a;x,k)=\int_0^x\frac{dt}{(1-at^2)\sqrt{(1-t^2)(1-k^2t^2)}}
+			\]
+			特に、
+			\[
+			K(k)=F(k,\frac{\pi}{2})\\
+			E(k)=E(k,\frac{\pi}{2})
+			\]
+			これらを第一種完全楕円積分、第二種完全楕円積分と呼ぶ<br>
+			<h2>ヤコビの楕円関数</h2><br>
+			\[
+			\textrm{sn}^{-1}\,x:=\int_0^x\frac{dt}{\sqrt{(1-t^2)(1-k^2t^2)}}\\
+			\textrm{cn}\,x=\sqrt{1-\textrm{sn}^2\,x}\\
+			\textrm{dn}\,x=\sqrt{1-k^2\textrm{sn}^2\,x}\\
+			\textrm{am}^{-1}(u,k):=\int_0^\varphi\frac{d\theta}{\sqrt{1-k^2\sin^2\theta}}
+			\]
+			性質
+			\[
+			\textrm{if}\,k=0\quad\textrm{sn}\,x=\sin x\quad\textrm{cn}\,x=\cos x\quad\textrm{dn}\,x=1\\
+			\textrm{if}\,k=1\quad\textrm{sn}\,x=\tanh x\quad\textrm{cn}\,x=\textrm{dn}\,x=\frac{1}{\cosh x}\\
+			\textrm{sn}\,x=\sin(\textrm{am}\,x)\quad\textrm{cn}\,x=\cos(\textrm{am}\,x)\\
+			(\textrm{sn}\,x)'=\textrm{cn}\,x\textrm{dn}\,x\\
+			(\textrm{cn}\,x)'=-\textrm{sn}\,x\textrm{dn}\,x\\
+			(\textrm{dn}\,x)'=-k^2\textrm{sn}\,x\textrm{cn}\,x
+			\]
+			<h2>二重階乗</h2><br>
+			\[
+			z!!=2^{\frac{1}{4}+\frac{z}{2}-\frac{1}{4}\cos(\pi z)}\pi^{-\frac{1}{4}+\frac{1}{4}\cos(\pi z)}\Gamma(1+\frac{z}{2})
+			\]
+			<h2>ストルーヴェ関数</h2><br>
+			\[
+			H_\nu(z)=\sum_{n=0}^\infty\frac{(-1)^n}{\Gamma(n+\frac{3}{2})\Gamma(\nu+n+\frac{3}{2})}\biggl(\frac{z}{2}\biggr)^{\nu+2n+1}
+			\]
+			<h2>変形ストルーヴェ関数</h2><br>
+			\[
+			L_\nu(z)=\sum_{n=0}^\infty\frac{1}{\Gamma(n+\frac{3}{2})\Gamma(\nu+n+\frac{3}{2})}\biggl(\frac{z}{2}\biggr)^{\nu+2n+1}
+			\]
+			<h2>ディリクレベータ関数</h2><br>
+			\[
+			\beta(s)=\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)^s}
+			\]
+			<h2>フルヴィッツ・ゼータ関数</h2><br>
+			\[
+			\zeta(s,x)=\sum_{n=0}^\infty\frac{1}{(n+x)^s}
+			\]
+			<h2>多重フルヴィッツ・ゼータ関数</h2><br>
+			\[
+			\zeta_r(s,x,\underline{\omega})
+            =\sum_{n_1,\cdots,n_r\geq 0:\mathbb{Z}}(x+n_1\omega_1+\cdots+n_r\omega_r)^{-s}\\
+            =\sum_{n\geq 0}(x+\underline{n}\cdot\underline{\omega})^{-s}\\
+			=\frac{1}{\Gamma(s)}\int_0^\infty\frac{e^{-xt}t^{s-1}}{(1-e^{\omega_1t})\cdots(1-e^{\omega_rt})}dt
+			\]
+			<h2>多重ガンマ関数</h2><br>
+			\[
+			\Gamma_r(x,\underline{\omega})=\exp\biggl(\frac{\partial}{\partial s}\zeta_r(s,x,\underline{\omega})\biggr|_{s=0}\biggr)
+			\]
+			<h2>多重三角関数(正規化)</h2><br>
+			\[
+			S_r(x,\underline{\omega})=\Gamma_r(x,\underline{\omega})^{-1}\Gamma_r(|\underline{\omega}|-x,\underline{\omega})^{(-1)^r}
+			\]
+			<h2>多重三角関数(非正規化)</h2><br>
+			\[
+			\mathbb{S}_r(x)=\prod_{\substack{n=-\infty\\ n\neq0}}^\infty P_r\biggl(\frac{x}{n}\biggr)^{n^{r-1}}\\
+            \times 2\pi x\qquad r=1\\
+			\times e^{\frac{x^{r-1}}{r-1}}\qquad r\geq 2\\
+			\biggl(But\quad P_r(u)=(1-u)\exp\biggl[u+\frac{u^2}{2}+\cdots+\frac{u^r}{r}\biggr]\biggr)
+			\]
+			<h2>多重対数関数</h2><br>
+			\[
+			\textrm{Li}_s(z)=\sum_{k=1}^\infty\frac{z^k}{k^s}
+			\]
+			<h2>マイヤーのG関数</h2><br>
+			\[
+			\newcommand{\masecGF}[5]{G_{#2}^{#1}\!\left(\genfrac{}{}{0pt}{}{#3}{#4}\,\biggr|\,#5\right)}\masecGF{m.n}{p,q}{a_1,\cdots,a_p}{b_1,\cdots,b_q}{z}\\
+			=\frac{1}{2\pi i}\int_L\frac{\prod_{j=1}^m\Gamma(b_j-s)\prod_{j=1}^n\Gamma(1-a_j+s)}{\prod{j=m+1}^q\Gamma(1-b_j+s)\prod_{j=n+1}^p\Gamma(a_j-s)}z^sds
+			\]
+		</div>
+	</body>
+</html>
