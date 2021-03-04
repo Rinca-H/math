@@ -1,1 +1,2 @@
-このサイト→https://rinca-h.github.io/math/masec_math.html
+古いやつ→https://rinca-h.github.io/math/old/masec_math.html
+メイン→https://rinca-h.github.io/math/math_new_home.html
