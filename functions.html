@@ -16,6 +16,7 @@
     p { margin: 1em 0em; line-height: 30px; }
 		table { border: solid 3px #000; border-collapse:collapse; background: #FFFCEF; }
 		td, th { padding: 0.5em; }
+    .equ { overflow: auto; }
 		</style>
 	</head>
 	<body style="margin: 0px; background: #FFF5D0;">
@@ -28,18 +29,20 @@
 				<tr><th><a href="#gamma">ガンマ関数</a></th></tr>
 			</table>
       <h4 id="beta">ベータ関数</h4>
-      <p>定義</p><br><div align="center"><img src="img/functions_equ01.svg" style="max-height: 50px; height: 10vw;"></div>
+      <p>定義</p><br>
+      <div align="center" class="equ"><img src="img/functions_equ01.svg"></div>
 			<p>公式</p>
-			<img src="img/functions_equ02.svg" style="max-height: 50px; height: 10vw;"><br><br>
-			<img src="img/functions_equ03.svg" style="max-height: 50px; height: 10vw;"><br><br>
-			<img src="img/functions_equ04.svg" style="max-height: 50px; height: 10vw;"><br><br>
-			<img src="img/functions_equ05.svg" style="max-height: 50px; height: 10vw;"><br><br>
-			<img src="img/functions_equ06.svg" style="max-height: 40px; height: 8vw;">
+			<div class="equ"><img id="test" src="img/functions_equ02.svg"></div><br><br>
+			<div class="equ"><img id="test" src="img/functions_equ03.svg"></div><br><br>
+			<div class="equ"><img id="test" src="img/functions_equ04.svg"></div><br><br>
+			<div class="equ"><img id="test" src="img/functions_equ05.svg"></div><br><br>
+			<div class="equ"><img id="test" src="img/functions_equ06.svg"></div>
 			<p>級数表示</p>
-			<img src="img/functions_equ07.svg" style="max-height: 50px; height: 8vw;"><br><br>
-			<div align="right">ただし、<img src="img/functions_equ08.svg" style="max-height: 25px; height: 2.5vw; vertical-align: middle;"></div>
+			<img id="test" src="img/functions_equ07.svg"></div><br><br>
+			<div align="right">ただし、<img id="test" src="img/functions_equ08.svg" style="vertical-align: middle;"></div>
 			<h4 id="gamma">ガンマ関数</h4>
-			<p>定義</p><br><div align="center"><img src="img/functions_equ09.svg" style="max-height: 50px; height: 10vw;"></div>
+			<p>定義</p><br>
+      <div align="center" class="equ"><img id="test" src="img/functions_equ09.svg"></div>
 			<p>特殊値</p>
 			<table border="1" style="border: solid 3px #000; border-collapse:collapse; background: #FFFCEF;">
 				<tr><th>$z$</th><th>$\Gamma(z)$</th></tr>
@@ -47,11 +50,22 @@
 				<tr><td>$\frac{1}{2}$</td><td>$\sqrt\pi$</td></tr>
 			</table>
 			<p>公式</p>
-			<img src="img/functions_equ10.svg" style="max-height: 50px; height: 10vw;"><br><br>
-			<img src="img/functions_equ11.svg" style="max-height: 25px; height: 4vw;">
+			<div class="equ"><img id="test" src="img/functions_equ10.svg"></div<br><br>
+			<div class="equ">><img id="test" src="img/functions_equ11.svg"></div
 			<p>級数表示</p>
 			
 		</div>
 		<div align="right" style="margin: 8px;"><span style="font-size: 70%;">constructed by: Rinca Hayamine</span></div>
+    <script type="text/javascript">
+      window_load();  
+      window.onresize = window_load;
+      function window_load() {
+        if(window.innerWidth > window.innerHeight){
+          document.getElementById("equ").style.zoom = "1.7";
+        } else {
+          document.getElementById("equ").style.zoom = "1.2";
+        }
+      }
+    </script>
 	</body>
 </html>
