@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<title>定理 - ますえく数学探検録</title>
-		<meta charset="UTF-8" />
-		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-		<script type="text/x-mathjax-config">
+<head>
+  <title>定理 - ますえく数学探検録</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
 		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-		</script>
-		<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
-		<style type="text/css">
-		.desc { font-size: 70%; color: #767676; margin-bottom: 32px; }
-		</style>
-		<style type="text/css">
+	</script>
+  <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+  <style type="text/css">
     p { margin: 1em 0em; line-height: 30px; }
-		.link { display: inline-block; padding: 0.3em 1em; width: 80%; margin: 0.5em; text-decoration: none; color: #000; background: #F6F6F6; border: solid 2px #595959; border-radius: 3px; }
-		</style>
-	</head>
-	<body style="margin: 0px; background: #FFF5D0;">
-		<div style="margin: 8px;"><span class="desc">uploaded:2021/03/04</span></div>
-		<div style="padding: 0.5em 1.5em;">
-			<h1>定理</h1>
-      <h4>ゼッケンドルフの定理</h4>
-      <p>任意の自然数は連続しない相異なるフィボナッチ数の和でただ1通りに表せる。<br>100 = 3 + 8 + 89</p>
-		</div>
-		<div align="right" style="margin: 8px;"><span style="font-size: 70%;">constructed by: Rinca Hayamine</span></div>
-	</body>
+    table { border: solid 3px #000; border-collapse: collapse; background: #FFFCEF; display: inline-block; vertical-align: top; margin: 0.5em; }
+    th, td { padding: 1em; text-align: center; }
+    img#equ { zoom: 1.7; }
+    div.equ { margin: 0.5em; }
+    .desc { font-size: 70%; color: #767676; margin-bottom: 32px; }
+    .equ { overflow: auto; }
+  </style>
+</head>
+<body style="margin: 0px; background: #FFF5D0;">
+  <div style="margin: 8px;"><span class="desc">uploaded:2021/03/04</span></div>
+  <div style="padding: 0.5em 1.5em;">
+    <h1>定理</h1>
+    <h3>目次</h3>
+    <table border="1">
+      <tr><th><a href="#Zeckendorf">ゼッケンドルフの定理</a></th></tr>
+    </table>
+    <h4　id="#Zeckendorf">ゼッケンドルフの定理</h4>
+      <p>任意の自然数は連続しない相異なるフィボナッチ数の和でただ1通りに表せる。<br>\(100 = 3 + 8 + 89\)</p>
+    <a href="#top">ページのトップへ</a>
+  </div>
+  <div align="right" style="margin: 8px;"><span style="font-size: 70%;">constructed by: Rinca Hayamine</span></div>
+  <script type="text/javascript">
+    window_load(); //読み込み時の表示
+    window.onresize = window_load; //ウィンドウサイズ変更時に更新
+    function window_load() {
+      if (window.innerWidth > window.innerHeight) {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.7";
+        }
+      } else {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.4";
+        }
+      }
+    }
+  </script>
+</body>
 </html>
