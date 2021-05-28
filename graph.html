@@ -4,39 +4,64 @@
   <title>グラフ - ますえく数学探検録</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width">
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <script type="text/x-mathjax-config">
 		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-		</script>
+	</script>
   <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
   <style type="text/css">
     p { margin: 1em 0em; line-height: 30px; }
+    table { border: solid 3px #000; border-collapse: collapse; background: #FFFCEF; display: inline-block; vertical-align: top; margin: 0.5em; }
+    th, td { padding: 1em; text-align: center; }
+    img#equ { zoom: 1.7; }
+    div.equ { margin: 0.5em; }
     .desc { font-size: 70%; color: #767676; margin-bottom: 32px; }
+    .equ { overflow: auto; }
   </style>
 </head>
 <body style="margin: 0px; background: #FFF5D0;">
   <div style="margin: 8px;"><span class="desc">uploaded:2021/03/04</span></div>
   <div style="padding: 0.5em 1.5em;">
+    <h1 id="top">グラフ</h1>
+    <h3>目次</h3>
+    <table border="1">
+      <tr><th><a href="#sec1">Twitterのアイコン</a></th></tr>
+    </table>
     <h1>グラフ</h1>
     <h3>■Twitterのアイコン</h3>
     <h4>星型ハイポサイクロイド(内サイクロイド)</h4>
     <div align="center"><img src="img/graph_img01.png" style="max-width: 500px; width: 80vw;"></div>
     <p>定義式</p><br>
-    <div align="center"><img src="img/graph_equ01.svg" style="max-height: 75px; height: 10vw;"></div>
+    <div align="center" class="equ"><img id="equ" src="img/graph_equ01.svg"></div>
     <h4>クローバーのグラフ</h4>
     <div align="center"><img src="img/graph_img02.png" style="max-width: 500px; width: 80vw;"></div>
     <p>定義式</p><br>
-    <div align="center"><img src="img/graph_equ02.svg" style="max-height: 25px; height: 4vw;"></div>
+    <div align="center" class="equ"><img id="equ" src="img/graph_equ02.svg"></div>
     <h4>虹色の星</h4>
     <div align="center"><img src="img/graph_img04.png" style="max-width: 500px; width: 80vw;"></div>
     <p>定義式</p><br>
-    <div align="center"><img src="img/graph_equ04.svg" style="max-height: 50px; height: 8vw;"></div>
+    <div align="center" class="equ"><img id="equ" src="img/graph_equ04.svg"></div>
     <h4>5代目アイコン</h4>
     <div align="center"><img src="img/graph_img05.png" style="max-width: 500px; width: 80vw;"></div>
     <p>定義式</p><br>
-    <div align="center"><img src="img/graph_equ05.svg" style="max-height: 50px; height: 8vw;"></div>
+    <div align="center" class="equ"><img id="equ" src="img/graph_equ05.svg"></div>
+    <a href="#top">ページのトップへ</a>
   </div>
   <div align="right" style="margin: 8px;"><span style="font-size: 70%;">constructed by: Rinca Hayamine</span></div>
+  <script type="text/javascript">
+    window_load(); //読み込み時の表示
+    window.onresize = window_load; //ウィンドウサイズ変更時に更新
+    function window_load() {
+      if (window.innerWidth > window.innerHeight) {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.7";
+        }
+      } else {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.4";
+        }
+      }
+    }
+  </script>
 </body>
 </html>
