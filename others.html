@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>その他 - ますえく数学探検録</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+  <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+  <style type="text/css">
+    p { margin: 1em 0em; line-height: 30px; }
+    table { border: solid 3px #000; border-collapse: collapse; background: #FFFCEF; display: inline-block; vertical-align: top; margin: 0.5em; }
+    th, td { padding: 1em; text-align: center; }
+    img#equ { zoom: 1.7; }
+    div.equ { margin: 0.5em; }
+    .desc { font-size: 70%; color: #767676; margin-bottom: 32px; }
+    .equ { overflow: auto; }
+  </style>
+</head>
+<body style="margin: 0px; background: #FFF5D0;">
+  <div style="margin: 8px;"><span class="desc">uploaded:2021/03/04</span></div>
+  <div style="padding: 0.5em 1.5em;">
+    <h1 id="top">その他</h1>
+    <h3>目次</h3>
+    <table border="1">
+      <tr><th><a href="#sec1">エマープ</a></th></tr>
+      <tr><th><a href="#sec2">ベルフェゴール素数</a></th></tr>
+      <tr><th><a href="#sec3">ミュンヒハウゼン数</a></th></tr>
+      <tr><th><a href="#sec4">チャンパーノウン数</a></th></tr>
+      <tr><th><a href="#sec5">HappyBirthday</a></th></tr>
+      <tr><th><a href="#sec6">ファクトリオン数</a></th></tr>
+    </table>
+    <h4 id="sec1">エマープ</h4>
+    <p>
+      　13と31のように、逆から読んでも素数(prime)である素数をエマープ(emirp)と呼ぶ。
+    </p>
+    <a href="#top">ページのトップへ</a>
+    <h4 id="sec2">ベルフェゴール素数</h4>
+    <p>
+      1000000000000066600000000000001<br>
+      　前から読んでも後ろから読んでも同じ数になる素数、回文素数。0の数は13。
+    </p>
+    <a href="#top">ページのトップへ</a>
+    <h4 id="sec3">ミュンヒハウゼン数</h4>
+    <p>
+      3435=3³+4⁴+3³+5⁵<br>
+      　このような自然数は自明なものを除いて3435のみである。
+    </p>
+    <a href="#top">ページのトップへ</a>
+    <h4 id="sec4">チャンパーノウン数</h4>
+    <p>
+      1.234567891011121314151617...<br>
+    </p>
+    <a href="#top">ページのトップへ</a>
+    <h4 id="sec5">HappyBirthday</h4>
+    <div class="equ"><img id="equ" src="img/others_a.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h4 id="sec6">ファクトリオン数</h4>
+    <div class="equ"><img id="equ" src="img/others_b.svg"></div>
+    <a href="#top">ページのトップへ</a>
+  </div>
+  <div align="right" style="margin: 8px;"><span style="font-size: 70%;">constructed by: Rinca Hayamine</span></div>
+  <script type="text/javascript">
+    window_load(); //読み込み時の表示
+    window.onresize = window_load; //ウィンドウサイズ変更時に更新
+    function window_load() {
+      if (window.innerWidth > window.innerHeight) {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.7";
+        }
+      } else {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.4";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
