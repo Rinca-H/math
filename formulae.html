@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>公式 - ますえく数学探検録</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+  <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+  <style type="text/css">
+    p { margin: 1em 0em; line-height: 30px; }
+    table { border: solid 3px #000; border-collapse: collapse; background: #FFFCEF; display: inline-block; vertical-align: top; margin: 0.5em; }
+    th, td { padding: 1em; text-align: center; }
+    img#equ { zoom: 1.7; }
+    div.equ { margin: 0.5em; }
+    .desc { font-size: 70%; color: #767676; margin-bottom: 32px; }
+    .equ { overflow: auto; }
+  </style>
+</head>
+<body style="margin: 0px; background: #FFF5D0;">
+  <div style="margin: 8px;"><span class="desc">uploaded:2021/03/04</span></div>
+  <div style="padding: 0.5em 1.5em;">
+    <h1 id="top">公式</h1>
+    <h3>目次</h3>
+    <table border="1">
+      <tr><th><a href="#sec1">グルサの定理</a></th></tr>
+      <tr><th><a href="#sec2">留数定理</a></th></tr>
+      <tr><th><a href="#sec3">フーリエ変換</a></th></tr>
+      <tr><th><a href="#sec4">ラプラス変換</a></th></tr>
+      <tr><th><a href="#sec5">メリン変換</a></th></tr>
+      <tr><th><a href="#sec6">ポアソンの和公式</a></th></tr>
+      <tr><th><a href="#sec7">分数階微分</a></th></tr>
+      <tr><th><a href="#sec8">複素数階微分</a></th></tr>
+      <tr><th><a href="#sec9">正規化積</a></th></tr>
+      <tr><th><a href="#sec10">丼積</a></th></tr>
+    </table>
+    <h3 id="sec1">グルサの定理</h3>
+    <div class="equ"><img id="equ" src="img/formulae_a.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec2">留数定理</h3>
+    <div class="equ"><img id="equ" src="img/formulae_b.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec3">フーリエ変換　(Fourier Transform)</h3>
+    <div class="equ"><img id="equ" src="img/formulae_c.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec4">ラプラス変換　(Laplace Transform)</h3>
+    <div class="equ"><img id="equ" src="img/formulae_d.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec5">メリン変換　(Mellin Transform)</h3>
+    <div class="equ"><img id="equ" src="img/formulae_e.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec6">ポアソンの和公式　(Poisson Sum)</h3>
+    <div class="equ"><img id="equ" src="img/formulae_f.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec7">分数階微分</h3>
+    <div class="equ"><img id="equ" src="img/formulae_g.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec8">複素数階微分</h3>
+    <div class="equ"><img id="equ" src="img/formulae_h.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec9">正規化積　(Regularized Product)</h3>
+    <div class="equ"><img id="equ" src="img/formulae_i.svg"></div>
+    <a href="#top">ページのトップへ</a>
+    <h3 id="sec10">丼積</h3>
+    <div class="equ"><img id="equ" src="img/formulae_j.svg"></div>
+    <a href="#top">ページのトップへ</a>
+  </div>
+  <div align="right" style="margin: 8px;"><span style="font-size: 70%;">constructed by: Rinca Hayamine</span></div>
+  <script type="text/javascript">
+    window_load(); //読み込み時の表示
+    window.onresize = window_load; //ウィンドウサイズ変更時に更新
+    function window_load() {
+      if (window.innerWidth > window.innerHeight) {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.7";
+        }
+      } else {
+        for (var i = 0; i < document.querySelectorAll("img#equ").length; i++) {
+          document.querySelectorAll("img#equ")[i].style.zoom = "1.4";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
